@@ -47,4 +47,4 @@ Run the file
 ```bash
 python groove_genie.py
 ```
-All customization optins can be changed through the CLI.
+All customization optins can be changed through the CLI. I would recommend choosing genres close to your input as otherwise it can lead to some strange outputs.
