@@ -22,12 +22,6 @@ by using the global variable at the top of the file.
 """
 
 
-
-
-
-
-
-
 import pandas as pd
 import numpy as np
 import faiss
@@ -306,16 +300,37 @@ def main():
             print("⚠️ Please enter a non-empty query.")
             continue
         
-        # Ask user for genres
+        # --- Ask user for genres ---
         genre_input = input("Enter genres (comma separated, or leave blank for all):\n")
         genres = [g.strip() for g in genre_input.split(",") if g.strip()] if genre_input else None
 
+        # --- Toggle Year or Popularity Filtering ---
+        filter_choice = input("Filter by (1) Year range, (2) Popularity, (3) Both, or (Enter to skip):\n").strip()
+
+        year_range = None
+        popularity_min = None
+
+        if filter_choice == "1" or filter_choice == "3":
+            try:
+                year_min = int(input("Enter minimum year (e.g. 1990):\n"))
+                year_max = int(input("Enter maximum year (e.g. 2020):\n"))
+                year_range = (year_min, year_max)
+            except ValueError:
+                print("⚠️ Invalid year input, skipping year filter.")
+
+        if filter_choice == "2" or filter_choice == "3":
+            try:
+                popularity_min = int(input("Enter minimum popularity (0–100):\n"))
+            except ValueError:
+                print("⚠️ Invalid popularity input, skipping popularity filter.")
+
+        # --- Get Recommendations ---
         recommendations = recommender.recommend(
             query,
             n_recommendations=50,
             genres=genres,
-            year_range=None,
-            popularity_min=None
+            year_range=year_range,
+            popularity_min=popularity_min
         )
         
         if recommendations.empty:
