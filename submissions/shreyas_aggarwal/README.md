@@ -10,11 +10,11 @@ The recommender encodes TV show descriptions into vectors using a Hugging Face s
 - Get recommendations (recs) = Displays your top 10 recommended shows
 - View stats (stats) = Displays show ratings and liked shows
 - Infinite scrolling – new shows are automatically loaded
-Type out commands in parenthesis in terminal
+-Type out commands in parenthesis in terminal
 
 ## Installation
-Clone the repository
-Install the dependencies
-Run main.py and follow the instructions in terminal or use the key in the features section above
+-Clone the repository
+-Install the dependencies
+-Run main.py and follow the instructions in terminal or use the key in the features section above
 
-A JSON file will be created to save data locally
+-A JSON file will be created to save data locally
