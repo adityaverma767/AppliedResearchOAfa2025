@@ -301,7 +301,7 @@ def main():
             continue
         
         # --- Ask user for genres ---
-        genre_input = input("Enter genres (comma separated, or leave blank for all):\n")
+        genre_input = input("Enter genres (comma separated):\n")
         genres = [g.strip() for g in genre_input.split(",") if g.strip()] if genre_input else None
 
         # --- Toggle Year or Popularity Filtering ---
