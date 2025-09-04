@@ -242,6 +242,5 @@ class TVShowRecommender:
 
 if __name__ == "__main__":
     print("Starting Infinite TV Show Recommender")
-    try:
-        recommender = TVShowRecommender()
-        recommender.run()
+    recommender = TVShowRecommender()
+    recommender.run()

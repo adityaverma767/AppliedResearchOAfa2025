@@ -16,5 +16,4 @@ The recommender encodes TV show descriptions into vectors using a Hugging Face s
 - Clone the repository
 - Install the dependencies
 - Run main.py and follow the instructions in terminal or use the key in the features section above
-
 - A JSON file will be created to save data locally
