@@ -20,7 +20,7 @@ Optionally writes predictions to a JSON file
 ## Usage
 You can use this program to classify a single snippet.
     For example:
-    python zero_shot_cli.py --text "NASA announces new mission to explore Jupiter's moons." --labels "space, politics, sports" --threshold 0.2
+    python zeroshot.py --text "NASA announces new mission to explore Jupiter's moons." --labels "space, politics, sports" --threshold 0.2
 
     Sample Output:
     Text: NASA announces new mission to explore Jupiter's moons.
